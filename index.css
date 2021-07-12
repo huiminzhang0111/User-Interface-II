@@ -1,18 +1,88 @@
+/*CSS Reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-header {
-    background-color: lightgray;
-    padding:20px;
-    margin-bottom: 15px;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
+*{
+    box-sizing:border-box; /*respect the width I've given you, if I add padding or border apply it within the width no in addition to it*/
+    padding:0;
+    margin:0;
+    max-width:100%;/*You can NEVER be bigger than your parent - this stops the horizontal scroll*/
+    /* border:1px solid grey; */
+}
+html{
+    font-size:62.5%;
+}
+body{
+    line-height:1.5;
+    font-size:1.8rem;
+    background-color:#FBFFFB;
+    color:#4f4f4f;
+}
+
+header{
+    background-color: lightgrey;
+    width:100%;
+    padding:2rem;
+}
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:60%;
+}
 .Intro {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+.Intro img{
+    padding:2rem;
+}
 .text{
     padding:20px;
-    width:50%;
+    width:60%;
 }
 
 
@@ -36,7 +106,8 @@ button {
     background-color: white;
     color:black;
     border:black solid 1px;
-    padding:10px 10px;
+    padding: 1rem 0;;
+    width:10rem;
 }
 button:hover{
     background-color: black;
@@ -47,4 +118,46 @@ button:hover{
 button a{
     text-decoration: none;
     color:inherit;
+}
+
+
+@media(max-width: 800px){
+    header{
+        text-align:center;
+        font-size: 5rem;
+    }
+    nav{
+        width:100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Intro{
+        flex-direction: column;
+
+    }
+    .text{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text p{
+        width:60%;
+    }
+    .row{
+        flex-wrap: wrap;
+    }
+    .one{
+        width:50%;
+    }
+    .two{
+        width:50%;
+    }
+    .three{
+        width:50%;
+    }
+    .four{
+        width:50%;
+    }
+    }
 }
