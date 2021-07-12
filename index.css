@@ -1,104 +1,50 @@
-*{
-    box-sizing:border-box;
-    max-width:100%;
-    }
 
-
-/* general style */
-html {
-    font-size: 62.5%;
-}
-body {
-    font-size:1.6rem;
-    line-height:1.5;
-    font-family:'Noto Sans JP', monospace;
+header {
+    background-color: lightgray;
+    padding:20px;
+    margin-bottom: 15px;
 }
 
-header h1{
-    font-family:'Bebas Neue', monospace;
-    font-size:8rem;
-    padding:0 3%;
-    margin-bottom: 0%;
-}
-
-section {
-    padding:4% 0;
-    width:90%;
-    margin: 0 auto;
-}
-
-/* header style */
-nav {
-    padding:0 5%;
-}
-
-nav a {
-    padding:1% 1%;
-    border-radius: 10px;
-    color:#ffcdb2;
-    text-decoration: none;
-}
-.HomePage, .AboutPage, .ContactPage, .ProjectsPage {
-    background-color: #b5838d;
-    margin-left:1%;
-}
-
-/* Intro */
 .Intro {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-.Intro .image {
-    margin:auto;
-}
-.image img {
-    border-radius: 99px;
-}
-.Intro .button {
-    background-color: cornflowerblue;
-    color:cornsilk;
-    padding: 1% 1%;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    width:30%;
-}
-.text {
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-left: 5%;
-    flex:2;
+.text{
+    padding:20px;
+    width:50%;
 }
 
-/* Gallery */
-.GalleryOne {
+
+.row{
     display:flex;
-    text-align:center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding:20px;
 }
-.GalleryTwo {
-    display:flex;
-    text-align:center;
-    justify-content: space-between;
-}
-.one, .two, .three, .four, .five, .six, .seven, .eight {
-    padding:0 1%;
-}
-/* footer */
-footer {
-    background-color: #ddbea9;
-    text-align:center;
-}
-footer .button {
-    background-color: cornflowerblue;
-    color:cornsilk;
-    padding: 1% 1%;
-    margin-bottom: 1%;
-    border-radius: 10px;
+.profolio{
     text-align: center;
+}
+
+footer {
+    background-color:lightgrey;
+    text-align:center;
+    padding:20px;
+}
+
+button {
+    background-color: white;
+    color:black;
+    border:black solid 1px;
+    padding:10px 10px;
+}
+button:hover{
+    background-color: black;
+    color:white;
+    border:white solid 1px;
+}
+
+button a{
     text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
+    color:inherit;
 }
